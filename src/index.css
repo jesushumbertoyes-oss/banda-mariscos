@@ -1,1 +1,43 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-mariscos-900 text-mariscos-100 antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-brass/30 text-mariscos-50;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-mariscos-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-mariscos-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brass;
+}
