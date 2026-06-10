@@ -9,7 +9,7 @@ class ServiceType(models.TextChoices):
 
 
 class Service(models.Model):
-    """Catálogo de servicios musicales con precio fijo y link de Clip"""
+    """Catálogo de servicios musicales"""
     service_type = models.CharField(
         max_length=20,
         choices=ServiceType.choices,
@@ -18,15 +18,10 @@ class Service(models.Model):
     title = models.CharField(max_length=150)
     short_description = models.CharField(max_length=300)
     full_description = models.TextField()
-    price = models.DecimalField(
-        max_digits=10,
-        decimal_places=2,
-        default=0.00,
-        help_text="Precio fijo en MXN. Ej: 1500.00"
-    )
-    clip_link = models.URLField(
+    price_range = models.CharField(
+        max_length=100,
         blank=True,
-        help_text="Link de pago de Clip para este servicio"
+        help_text="Ej: Desde $1,500 MXN"
     )
     duration_info = models.CharField(
         max_length=100,
@@ -52,23 +47,15 @@ class Service(models.Model):
         verbose_name_plural = "Servicios"
 
     def __str__(self):
-        return f"{self.title} — ${self.price:,.2f} MXN"
+        return f"{self.title} ({self.get_service_type_display()})"
 
 
 class QuoteRequest(models.Model):
-    """Solicitudes de contratación con estado de pago"""
+    """Solicitudes de cotización de clientes"""
     phone_validator = RegexValidator(
         regex=r'^\+?1?\d{9,15}$',
         message="Número de teléfono debe contener entre 9 y 15 dígitos."
     )
-
-    STATUS_CHOICES = [
-        ('pending_payment', 'Pago Pendiente'),
-        ('paid', 'Pagado'),
-        ('in_progress', 'En Proceso'),
-        ('completed', 'Completado'),
-        ('cancelled', 'Cancelado'),
-    ]
 
     service = models.ForeignKey(
         Service,
@@ -91,6 +78,11 @@ class QuoteRequest(models.Model):
         verbose_name="Links de referencia",
         help_text="YouTube, Spotify, ejemplos de estilo deseado"
     )
+    budget_hint = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name="Presupuesto aproximado"
+    )
     urgency = models.CharField(
         max_length=20,
         choices=[
@@ -103,8 +95,14 @@ class QuoteRequest(models.Model):
     )
     status = models.CharField(
         max_length=20,
-        choices=STATUS_CHOICES,
-        default='pending_payment',
+        choices=[
+            ('pending', 'Pendiente'),
+            ('contacted', 'Contactado'),
+            ('in_progress', 'En proceso'),
+            ('completed', 'Completado'),
+            ('cancelled', 'Cancelado'),
+        ],
+        default='pending',
         verbose_name="Estado"
     )
     admin_notes = models.TextField(blank=True, verbose_name="Notas internas")
@@ -113,8 +111,8 @@ class QuoteRequest(models.Model):
 
     class Meta:
         ordering = ['-created_at']
-        verbose_name = "Solicitud de Contratación"
-        verbose_name_plural = "Solicitudes de Contratación"
+        verbose_name = "Solicitud de Cotización"
+        verbose_name_plural = "Solicitudes de Cotización"
 
     def __str__(self):
-        return f"{self.full_name} — {self.service.title} ({self.get_status_display()})"
+        return f"{self.full_name} - {self.service.title} ({self.created_at.strftime('%d/%m/%Y')})"

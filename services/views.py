@@ -23,7 +23,7 @@ class ServiceListView(generics.ListAPIView):
 class QuoteRequestCreateView(APIView):
     """
     POST /api/services/quote/
-    Recibe formulario de contratación, guarda en DB y devuelve clip_link.
+    Recibe formulario de cotización desde React.
     Rate limit: 5 solicitudes por hora por IP.
     """
     throttle_classes = [QuoteThrottle]
@@ -31,14 +31,12 @@ class QuoteRequestCreateView(APIView):
     def post(self, request):
         serializer = QuoteRequestCreateSerializer(data=request.data)
         if serializer.is_valid():
-            quote = serializer.save(status='pending_payment')
+            quote = serializer.save()
             return Response({
                 "success": True,
-                "message": "Solicitud guardada. Procede al pago para confirmar tu contratación.",
+                "message": "¡Solicitud enviada con éxito! Te contactaremos pronto por WhatsApp.",
                 "quote_id": quote.id,
-                "service": quote.service.title,
-                "price": str(quote.service.price),
-                "clip_link": quote.service.clip_link,
+                "service": quote.service.title
             }, status=status.HTTP_201_CREATED)
 
         return Response({
