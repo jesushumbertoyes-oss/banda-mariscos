@@ -30,12 +30,11 @@ const VideosSection = () => {
 
   const handleSelectVideo = (video) => {
     setActiveVideo(video);
-    setIsPlaying(true);
+    setIsPlaying(false); // Reseteamos el play para que muestre la miniatura del nuevo video seleccionado
     setCopied(false);
     document.getElementById('video-player-container')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Funciones dinámicas para compartir el video activo
   const shareOnWhatsApp = () => {
     if (!activeVideo) return;
     const url = `https://youtu.be/${activeVideo.youtube_id}`;
@@ -94,14 +93,16 @@ const VideosSection = () => {
                 ) : (
                   <button 
                     onClick={() => setIsPlaying(true)}
-                    className="w-full h-full absolute inset-0 block p-0 m-0 border-0 cursor-pointer group focus:outline-none"
-                    style={{
-                      backgroundImage: `url(https://i.ytimg.com/vi/${activeVideo.youtube_id}/maxresdefault.jpg)`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
-                    }}
+                    className="w-full h-full absolute inset-0 block p-0 m-0 border-0 cursor-pointer group focus:outline-none overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300 z-10" />
+                    {/* Imagen de fondo real en HTML para evitar fallos de comillas de CSS */}
+                    <img 
+                      src={`https://i.ytimg.com/vi/${activeVideo.youtube_id}/hqdefault.jpg`} 
+                      alt={activeVideo.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
+                    />
+
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 z-10" />
                     
                     {videos[0].id === activeVideo.id && (
                       <span className="absolute top-4 left-4 z-20 bg-brass text-mariscos-900 text-xs font-bold px-3 py-1 rounded-full tracking-wider animate-bounce">
@@ -127,14 +128,10 @@ const VideosSection = () => {
                   </p>
                 )}
                 
-                {/* BARRA DE COMPARTIR AVANZADA */}
                 <div className="mt-4 pt-4 border-t border-mariscos-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                  
-                  {/* Botones Redes Principales */}
                   <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <span className="text-[11px] font-body text-mariscos-400 uppercase tracking-wider font-bold block mr-1">Compartir:</span>
                     
-                    {/* WhatsApp */}
                     <button 
                       onClick={shareOnWhatsApp}
                       className="px-3 py-1.5 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-body font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
@@ -142,7 +139,6 @@ const VideosSection = () => {
                       WhatsApp
                     </button>
 
-                    {/* Facebook */}
                     <button 
                       onClick={shareOnFacebook}
                       className="px-3 py-1.5 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-body font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
@@ -150,7 +146,6 @@ const VideosSection = () => {
                       Facebook
                     </button>
 
-                    {/* Copiar Enlace */}
                     <button 
                       onClick={copyToClipboard}
                       className={`px-3 py-1.5 rounded text-xs font-body font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
@@ -162,7 +157,6 @@ const VideosSection = () => {
                     </button>
                   </div>
 
-                  {/* Ver en YouTube */}
                   <a 
                     href={`https://www.youtube.com/watch?v=${activeVideo.youtube_id}`}
                     target="_blank"
