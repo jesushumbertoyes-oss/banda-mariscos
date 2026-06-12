@@ -10,7 +10,7 @@ const api = axios.create({
   timeout: 10000,
 });
 
-// Interceptor para manejar errores globalmente
+// Interceptor para manejar errores globalmente de forma segura
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -24,6 +24,8 @@ api.interceptors.response.use(
 export const fetchBandInfo = () => api.get('/core/band-info/');
 export const fetchVideos = () => api.get('/core/videos/all/');
 export const fetchServices = () => api.get('/services/services/');
+
+// Forzamos a que retorne la respuesta limpia de Axios para que el hook lea el .data
 export const submitQuote = (data) => api.post('/services/quote/', data);
 
 export default api;
