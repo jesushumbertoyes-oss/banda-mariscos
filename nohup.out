@@ -8,3 +8,13 @@ npm ERR! enoent
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/userland/.npm/_logs/2026-06-10T00_17_08_388Z-debug-0.log
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /home/userland/banda-mariscos/backend/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/home/userland/banda-mariscos/backend/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/userland/.npm/_logs/2026-06-10T04_28_23_389Z-debug-0.log
