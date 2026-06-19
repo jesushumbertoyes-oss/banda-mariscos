@@ -1,62 +1,10 @@
 [
 {
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2026-06-19T06:06:14.753Z",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "1",
-    "object_repr": "Banda Mariscos",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2026-06-19T11:55:21.621Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "Silvia la de la frutería",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2026-06-19T12:01:25.978Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Pastelitos patitos (Intros y Outros para Contenido Digital)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 4,
-  "fields": {
-    "action_time": "2026-06-19T12:02:56.286Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "Jesús Humberto Gaxiola de león - Pastelitos patitos (19/06/2026)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$720000$wg4m6o3mIluLN2z3ZOI5Zc$oZWWi9UuYXOQA9lPWmqX5DmzkHhZB1ysdw52L3zutM8=",
-    "last_login": "2026-06-15T13:16:54.240Z",
+    "password": "pbkdf2_sha256$720000$KXYzIfOoQDNJdmZ91Y51hy$PyDuLGdH41K6PJBHet30Ff2Q7KfyooTU9hQrS1WRDgA=",
+    "last_login": "2026-06-10T16:19:22.328Z",
     "is_superuser": true,
     "username": "humberto",
     "first_name": "",
@@ -64,17 +12,17 @@
     "email": "jesushumbertoyes@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2026-06-15T13:15:14.258Z",
+    "date_joined": "2026-06-08T04:06:14.299Z",
     "groups": [],
     "user_permissions": []
   }
 },
 {
   "model": "sessions.session",
-  "pk": "uirrns2ctddm31hdytfqy43400eelmk0",
+  "pk": "ia0anzrnadt1dz5jokjbo1cd2wfnazuf",
   "fields": {
-    "session_data": ".eJxVjMsOwiAQRf-FtSEwPAZcuvcbyJSHVA0kpV0Z_12bdKHbe865LxZoW2vYRl7CnNiZSXb63SaKj9x2kO7Ubp3H3tZlnviu8IMOfu0pPy-H-3dQadRvLQijyRa0zb4UBUJjLETFK2scZpmsRwGOoACaKL3yaITRCSMl5QDY-wPWizcm:1wZ7BO:UW3HrCRgfd7Mmkedd14c4Ruu4yvXAUiz_VjrzV7s0Do",
-    "expire_date": "2026-06-29T13:16:54.303Z"
+    "session_data": ".eJxVjDsOwjAQRO_iGlnx2vGHkj5nsHbtDQ4gR4qTCnF3EikFFNPMezNvEXFbS9waL3HK4iqUuPx2hOnJ9QD5gfU-yzTXdZlIHoo8aZPDnPl1O92_g4Kt7GsNndGZ0Yw29M5bDGOybFkRONYQfMhmD5IN4LRxVncJsiLnTQ-GtPh8Ac67Nv0:1wXL4D:wiYSAWQ5VVCToxd76mN18Hq-duVxloKlqXeVzeg2dzc",
+    "expire_date": "2026-06-24T15:42:09.930Z"
   }
 },
 {
@@ -82,71 +30,306 @@
   "pk": 1,
   "fields": {
     "name": "Banda Mariscos",
-    "slogan": "Modern Regional Urbano",
-    "description": "Proyecto musical que fusiona el género regional mexicano tradicional con ritmos urbanos y modernos, manteniendo letras respetuosas y con todo el sabor.",
-    "founded_date": "2026-05-10",
+    "slogan": "Modern Regional Urbano • Sinaloa Callejero",
+    "description": "Puro metal pesado, güiro tradicional, tololoche raspado y la esencia rústica de nuestra música.",
+    "founded_date": "2026-01-01",
     "logo": "",
-    "contact_email": "jesushumbertoyes@gmail.com",
-    "contact_whatsapp": "+526868325054",
-    "youtube_channel_url": "https://youtube.com/@bandamariscos?si=nuZa08P7BDCBirR4",
+    "contact_email": "",
+    "contact_whatsapp": "+526691234567",
+    "youtube_channel_url": "",
     "is_active": true,
-    "created_at": "2026-06-19T06:06:14.623Z",
-    "updated_at": "2026-06-19T06:06:14.623Z"
+    "created_at": "2026-06-08T15:03:39.969Z",
+    "updated_at": "2026-06-08T15:03:39.978Z"
   }
 },
 {
   "model": "core.youtubevideo",
-  "pk": 1,
+  "pk": 7,
   "fields": {
     "band": 1,
-    "title": "Silvia la de la frutería",
-    "youtube_id": "JgEVPCJ5Oj4wnnYa",
-    "description": "Enamorado de silvia de la frutería",
-    "thumbnail_url": "http://www.google.com",
-    "is_featured": false,
-    "order": 1,
+    "title": "las vueltas de la vida - Banda Mariscos (Corrido Moderno Regional Urbano)",
+    "youtube_id": "Ku0-urwJ0X4",
+    "description": "Escucha \"las vueltas de la vida\", lo más nuevo de Banda Mariscos. Este tema es puro Moderno Regional Urbano, combinando el ...",
+    "thumbnail_url": "https://i.ytimg.com/vi/Ku0-urwJ0X4/hqdefault.jpg",
+    "is_featured": true,
+    "order": 0,
     "is_active": true,
-    "published_at": "2026-05-19T11:53:00Z",
-    "created_at": "2026-06-19T11:55:21.541Z"
+    "published_at": null,
+    "created_at": "2026-06-10T06:13:23.984Z"
+  }
+},
+{
+  "model": "core.youtubevideo",
+  "pk": 8,
+  "fields": {
+    "band": 1,
+    "title": "Silvia De la Frutería - Banda Mariscos (Corrido Moderno Regional Urbano)",
+    "youtube_id": "8anyGhWFl1M",
+    "description": "Escucha \"Silvia De la Frutería\", lo más nuevo de Banda Mariscos. Este tema es puro Moderno Regional Urbano, combinando el ...",
+    "thumbnail_url": "https://i.ytimg.com/vi/8anyGhWFl1M/hqdefault.jpg",
+    "is_featured": true,
+    "order": 0,
+    "is_active": true,
+    "published_at": null,
+    "created_at": "2026-06-10T06:13:23.994Z"
+  }
+},
+{
+  "model": "core.youtubevideo",
+  "pk": 9,
+  "fields": {
+    "band": 1,
+    "title": "El Toro Tumbado - Banda Mariscos (Corrido Moderno Regional Urbano)",
+    "youtube_id": "_vTf1VfUMd4",
+    "description": "Escucha \"El Toro Tumbado\", lo más nuevo de Banda Mariscos. Este tema es puro Moderno Regional Urbano, combinando el ...",
+    "thumbnail_url": "https://i.ytimg.com/vi/_vTf1VfUMd4/hqdefault.jpg",
+    "is_featured": true,
+    "order": 0,
+    "is_active": true,
+    "published_at": null,
+    "created_at": "2026-06-10T06:13:24.003Z"
+  }
+},
+{
+  "model": "core.youtubevideo",
+  "pk": 10,
+  "fields": {
+    "band": 1,
+    "title": "El Baile De La Rana - Banda Mariscos (Corrido Moderno Regional Urbano)",
+    "youtube_id": "yRw3smi3sbg",
+    "description": "Escucha \"El Baile De La Rana\", lo más nuevo de Banda Mariscos. Este tema es puro Moderno Regional Urbano, combinando el ...",
+    "thumbnail_url": "https://i.ytimg.com/vi/yRw3smi3sbg/hqdefault.jpg",
+    "is_featured": true,
+    "order": 0,
+    "is_active": true,
+    "published_at": null,
+    "created_at": "2026-06-10T06:13:24.011Z"
+  }
+},
+{
+  "model": "core.youtubevideo",
+  "pk": 11,
+  "fields": {
+    "band": 1,
+    "title": "Vámonos pal rancho - Banda Mariscos (Corrido Moderno Regional Urbano)",
+    "youtube_id": "Hmqfv_DyM5Q",
+    "description": "Escucha \"Vámonos pal rancho\", lo más nuevo de Banda Mariscos. Este tema es puro Moderno Regional Urbano, combinando el ...",
+    "thumbnail_url": "https://i.ytimg.com/vi/Hmqfv_DyM5Q/hqdefault.jpg",
+    "is_featured": true,
+    "order": 0,
+    "is_active": true,
+    "published_at": null,
+    "created_at": "2026-06-10T06:13:24.023Z"
   }
 },
 {
   "model": "services.service",
-  "pk": 1,
+  "pk": 6,
   "fields": {
-    "service_type": "intro_outro",
-    "title": "Pastelitos patitos",
-    "short_description": "Buenos pasteles",
-    "full_description": "Gun fruta i ye denim hjcfffhkyggkk uy y Thu k",
-    "price_range": "2500",
-    "duration_info": "10",
+    "service_type": "custom_song",
+    "title": "Corrido o Canción por Encargo",
+    "short_description": "Tú me das los datos por WhatsApp y yo me encargo de todo el jale. Olvídate de rimas automáticas de robot, lo armamos con estilo sinaloense rústico y real.",
+    "full_description": "Transformamos los datos y la historia que nos envíes en un corrido personalizado. Nos aseguramos de que los nombres, apodos y vivencias de tu gente queden bien hilados al verdadero estilo rústico callejero, listo para presumir.",
+    "price_range": "Desde $120 MXN",
+    "duration_info": "2 - 3 minutos",
     "includes": [
-      "Equipo de audio profesional",
-      "Iluminación moderna",
-      "Repertorio adaptado al evento"
+      "Letra con jerga sinaloense real",
+      "Estructura de corrido tradicional",
+      "Entrega rápida por WhatsApp"
     ],
-    "icon": "Alegria",
+    "icon": "🎵",
     "is_active": true,
     "order": 1,
-    "created_at": "2026-06-19T12:01:25.921Z"
+    "created_at": "2026-06-10T04:31:36.763Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 7,
+  "fields": {
+    "service_type": "intro_outro",
+    "title": "Intros y Outros Digitales",
+    "short_description": "Música de identidad de 5 a 10 segundos con tololoche pesado, vientos de guerra y tarola para podcasts y YouTubers.",
+    "full_description": "Creamos intros y outros cortas con el sello rústico de Banda Mariscos. Ideales para creadores de contenido, canales de YouTube y streams que necesitan una identidad sonora inconfundible y con mucha presencia.",
+    "price_range": "Desde $120 MXN",
+    "duration_info": "5 - 10 segundos",
+    "includes": [
+      "Identidad musical exclusiva",
+      "Entrega en alta calidad",
+      "Uso libre en redes sociales"
+    ],
+    "icon": "🎬",
+    "is_active": true,
+    "order": 2,
+    "created_at": "2026-06-10T04:31:36.776Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 8,
+  "fields": {
+    "service_type": "soundscape",
+    "title": "Paisajes Sonoros (Audio Ambiente)",
+    "short_description": "Paquetes de 5 a 10 pistas instrumentales de fondo para restaurantes, marisquerías o barberías.",
+    "full_description": "Música instrumental de banda sinaloense rústica y elegante diseñada en loops continuos. Perfecta para ambientar locales comerciales, mantener el ambiente encendido en el negocio y llamar la atención de tus clientes sin distraer.",
+    "price_range": "Desde $120 MXN",
+    "duration_info": "Paquetes de 5 a 10 pistas",
+    "includes": [
+      "Audio en loop perfecto",
+      "Ambiente ideal para comercios",
+      "Entrega digital inmediata"
+    ],
+    "icon": "🌊",
+    "is_active": true,
+    "order": 3,
+    "created_at": "2026-06-10T04:31:36.788Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 9,
+  "fields": {
+    "service_type": "soundbite",
+    "title": "Frases con Sabor (Sound Bites)",
+    "short_description": "Remates musicales de 3 a 5 segundos con dichos sinaloenses auténticos para creadores de contenido y memes.",
+    "full_description": "Sound bites de impacto con el acento y la jerga callejera más real de Sinaloa. Diseñados especialmente para transiciones de video, TikToks virales o memes, acompañados del golpe fuerte de tololoche y metales.",
+    "price_range": "Desde $120 MXN",
+    "duration_info": "3 - 5 segundos",
+    "includes": [
+      "Golpe musical de impacto",
+      "Dichos sinaloenses auténticos",
+      "Listo para videos virales"
+    ],
+    "icon": "🔥",
+    "is_active": true,
+    "order": 4,
+    "created_at": "2026-06-10T04:31:36.800Z"
   }
 },
 {
   "model": "services.quoterequest",
   "pk": 1,
   "fields": {
-    "service": 1,
-    "full_name": "Jesús Humberto Gaxiola de león",
-    "phone": "6692207734",
-    "email": "bobloquito@gmail.com",
-    "details": "Vgdfghhj yyytfgyi jhggc jkk bbj",
-    "reference_links": "Ghhhjjji yyhvhggft vhhgthjj",
-    "budget_hint": "2500",
+    "service": 7,
+    "full_name": "Jesus",
+    "phone": "6868325044",
+    "email": "jesushumbertoyes@gmail.com",
+    "details": "Quiero una canción que hable sobre los chistes de pepito",
+    "reference_links": "",
+    "budget_hint": "150",
     "urgency": "normal",
     "status": "pending",
-    "admin_notes": "Vgdfghhj o\r\nHfghjl\r\nHgggftt",
-    "created_at": "2026-06-19T12:02:56.226Z",
-    "updated_at": "2026-06-19T12:02:56.226Z"
+    "admin_notes": "",
+    "created_at": "2026-06-10T14:45:21.705Z",
+    "updated_at": "2026-06-10T14:45:21.707Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 2,
+  "fields": {
+    "service": 7,
+    "full_name": "Jesús Humberto Gaxiola de león",
+    "phone": "+526692207734",
+    "email": "bobloquito@gmail.com",
+    "details": "Quiero una canción de Pepito en donde mencione sus chistes",
+    "reference_links": "",
+    "budget_hint": "120",
+    "urgency": "normal",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T14:54:28.774Z",
+    "updated_at": "2026-06-10T14:54:28.784Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 3,
+  "fields": {
+    "service": 8,
+    "full_name": "Jorge",
+    "phone": "6868325044",
+    "email": "bobloquito@gmail.com",
+    "details": "Quiero una canción de amor que pegue dedicada para ashley",
+    "reference_links": "",
+    "budget_hint": "200",
+    "urgency": "normal",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T16:15:43.499Z",
+    "updated_at": "2026-06-10T16:15:43.503Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 4,
+  "fields": {
+    "service": 9,
+    "full_name": "Miguel",
+    "phone": "6868325044",
+    "email": "bobloquito@gmail.com",
+    "details": "Quiero frases que le den real se ami taquera el norteño",
+    "reference_links": "",
+    "budget_hint": "300",
+    "urgency": "low",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T16:28:16.498Z",
+    "updated_at": "2026-06-10T16:28:16.500Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 5,
+  "fields": {
+    "service": 7,
+    "full_name": "Francisco",
+    "phone": "6868325044",
+    "email": "bobloquito@gmail.com",
+    "details": "Porra de alegría del equipo de selección de mexixo",
+    "reference_links": "",
+    "budget_hint": "120",
+    "urgency": "low",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T16:44:43.808Z",
+    "updated_at": "2026-06-10T16:44:43.811Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 6,
+  "fields": {
+    "service": 6,
+    "full_name": "Rodrigo",
+    "phone": "6868325044",
+    "email": "",
+    "details": "Quiero un corrido que hable sobre los pescadores",
+    "reference_links": "",
+    "budget_hint": "",
+    "urgency": "normal",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T16:57:07.201Z",
+    "updated_at": "2026-06-10T16:57:07.206Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 7,
+  "fields": {
+    "service": 8,
+    "full_name": "Luisa",
+    "phone": "6868325044",
+    "email": "bobloquito@gmail.com",
+    "details": "Quiero una canción que hable sobre los caminos que llevan a casa",
+    "reference_links": "",
+    "budget_hint": "170",
+    "urgency": "high",
+    "status": "pending",
+    "admin_notes": "",
+    "created_at": "2026-06-10T17:01:38.935Z",
+    "updated_at": "2026-06-10T17:01:38.938Z"
   }
 }
 ]
