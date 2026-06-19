@@ -1,0 +1,152 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-06-19T06:06:14.753Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Banda Mariscos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-06-19T11:55:21.621Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Silvia la de la frutería",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-06-19T12:01:25.978Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Pastelitos patitos (Intros y Outros para Contenido Digital)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-06-19T12:02:56.286Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Jesús Humberto Gaxiola de león - Pastelitos patitos (19/06/2026)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$wg4m6o3mIluLN2z3ZOI5Zc$oZWWi9UuYXOQA9lPWmqX5DmzkHhZB1ysdw52L3zutM8=",
+    "last_login": "2026-06-15T13:16:54.240Z",
+    "is_superuser": true,
+    "username": "humberto",
+    "first_name": "",
+    "last_name": "",
+    "email": "jesushumbertoyes@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-15T13:15:14.258Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uirrns2ctddm31hdytfqy43400eelmk0",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwPAZcuvcbyJSHVA0kpV0Z_12bdKHbe865LxZoW2vYRl7CnNiZSXb63SaKj9x2kO7Ubp3H3tZlnviu8IMOfu0pPy-H-3dQadRvLQijyRa0zb4UBUJjLETFK2scZpmsRwGOoACaKL3yaITRCSMl5QDY-wPWizcm:1wZ7BO:UW3HrCRgfd7Mmkedd14c4Ruu4yvXAUiz_VjrzV7s0Do",
+    "expire_date": "2026-06-29T13:16:54.303Z"
+  }
+},
+{
+  "model": "core.bandinfo",
+  "pk": 1,
+  "fields": {
+    "name": "Banda Mariscos",
+    "slogan": "Modern Regional Urbano",
+    "description": "Proyecto musical que fusiona el género regional mexicano tradicional con ritmos urbanos y modernos, manteniendo letras respetuosas y con todo el sabor.",
+    "founded_date": "2026-05-10",
+    "logo": "",
+    "contact_email": "jesushumbertoyes@gmail.com",
+    "contact_whatsapp": "+526868325054",
+    "youtube_channel_url": "https://youtube.com/@bandamariscos?si=nuZa08P7BDCBirR4",
+    "is_active": true,
+    "created_at": "2026-06-19T06:06:14.623Z",
+    "updated_at": "2026-06-19T06:06:14.623Z"
+  }
+},
+{
+  "model": "core.youtubevideo",
+  "pk": 1,
+  "fields": {
+    "band": 1,
+    "title": "Silvia la de la frutería",
+    "youtube_id": "JgEVPCJ5Oj4wnnYa",
+    "description": "Enamorado de silvia de la frutería",
+    "thumbnail_url": "http://www.google.com",
+    "is_featured": false,
+    "order": 1,
+    "is_active": true,
+    "published_at": "2026-05-19T11:53:00Z",
+    "created_at": "2026-06-19T11:55:21.541Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 1,
+  "fields": {
+    "service_type": "intro_outro",
+    "title": "Pastelitos patitos",
+    "short_description": "Buenos pasteles",
+    "full_description": "Gun fruta i ye denim hjcfffhkyggkk uy y Thu k",
+    "price_range": "2500",
+    "duration_info": "10",
+    "includes": [
+      "Equipo de audio profesional",
+      "Iluminación moderna",
+      "Repertorio adaptado al evento"
+    ],
+    "icon": "Alegria",
+    "is_active": true,
+    "order": 1,
+    "created_at": "2026-06-19T12:01:25.921Z"
+  }
+},
+{
+  "model": "services.quoterequest",
+  "pk": 1,
+  "fields": {
+    "service": 1,
+    "full_name": "Jesús Humberto Gaxiola de león",
+    "phone": "6692207734",
+    "email": "bobloquito@gmail.com",
+    "details": "Vgdfghhj yyytfgyi jhggc jkk bbj",
+    "reference_links": "Ghhhjjji yyhvhggft vhhgthjj",
+    "budget_hint": "2500",
+    "urgency": "normal",
+    "status": "pending",
+    "admin_notes": "Vgdfghhj o\r\nHfghjl\r\nHgggftt",
+    "created_at": "2026-06-19T12:02:56.226Z",
+    "updated_at": "2026-06-19T12:02:56.226Z"
+  }
+}
+]
